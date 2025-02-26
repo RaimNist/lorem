@@ -1,0 +1,23 @@
+.page {
+    background-color: #282829;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+}
+
+.logo {
+    grid-column: span 1;
+    justify-self: end;
+    text-transform: uppercase;
+    font-family: 'Prata', serif;
+}
+
+.header__menu {
+    grid-column: 2 / 4;
+    justify-self: end;
+}
