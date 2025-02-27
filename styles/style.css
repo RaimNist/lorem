@@ -145,6 +145,7 @@
 
     /* ВАЖНО: фиксируем изображение у верха */
     align-self: start;
+    justify-self: end;
 }
 
 .about {
@@ -350,4 +351,58 @@
 .terms {
     justify-self: end;
     color: #d5c9be;
+}
+
+@media(width <= 1366px) {
+    .cover__description {
+        gap: 15px;
+    }
+
+    .cover-subtitle {
+        font-size: 34px;
+    }
+
+    .cover-list-item {
+        font-size: 16px;
+        padding-inline-start: 35px;
+    }
+
+    .list-item-accent {
+        font-size: 24px;
+        top: 2px;
+    }
+
+    .cover-list-item::before {
+        inline-size: 26px;
+        block-size: 26px;
+        background-position: center;
+        background-size: contain;
+        left: 0;
+        bottom: 3px;
+    }
+
+    .cover-btn {
+        padding: 30px 20px;
+    }
+
+    .about {
+        gap: 30px;
+        
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about__description {
+        grid-column: 2 / 3;
+    }
+
+    .about__image {
+        max-block-size: 80vh;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        max-inline-size: 100%;
+    }
+
+    .about__description + .about__image {
+        display: none;
+    }
 }
